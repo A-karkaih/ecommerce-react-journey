@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import "./header.css";
+import '../shared-css/header.css';
 export const HomePage = () => {
   return (
     <>

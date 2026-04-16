@@ -2,6 +2,7 @@ import "./HomePage.css";
 import { Header } from "../../components/Header";
 import { products } from "../../../starting-code/data/products";
 export const HomePage = () => {
+
   return (
     <>
       <title>Ecommerce Project</title>
@@ -16,7 +17,7 @@ export const HomePage = () => {
                 </div>
 
                 <div className="product-name limit-text-to-2-lines">
-                  Black and Gray Athletic Cotton Socks - 6 Pairs
+                  {product.name} 
                 </div>
 
                 <div className="product-rating-container">

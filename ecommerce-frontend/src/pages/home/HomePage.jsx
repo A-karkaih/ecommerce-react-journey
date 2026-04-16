@@ -2,6 +2,9 @@ import "./HomePage.css";
 import { Header } from "../../components/Header";
 import { products } from "../../../starting-code/data/products";
 export const HomePage = () => {
+  fetch("http://localhost:3000/api/products")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 
   return (
     <>
@@ -17,7 +20,7 @@ export const HomePage = () => {
                 </div>
 
                 <div className="product-name limit-text-to-2-lines">
-                  {product.name} 
+                  {product.name}
                 </div>
 
                 <div className="product-rating-container">

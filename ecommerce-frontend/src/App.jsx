@@ -19,7 +19,7 @@ function App() {
       <Route index element={<HomePage cart={cart} />} />
       <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
       <Route path="/tracking" element={<TrackingPage />} />
-      <Route path="/orders" element={<OrdersPage />} />
+      <Route path="/orders" element={<OrdersPage cart={cart} />} />
       <Route path="*" element={<h1>404 Not Found</h1>} />
     </Routes>
   );

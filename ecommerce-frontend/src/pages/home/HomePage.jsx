@@ -7,9 +7,15 @@ export const HomePage = ({ cart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/products").then((res) => {
-      setProducts(res.data);
-    });
+    async function getHomeData() {
+      try {
+        const response = await axios.get("/api/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getHomeData();
   }, []);
 
   return (

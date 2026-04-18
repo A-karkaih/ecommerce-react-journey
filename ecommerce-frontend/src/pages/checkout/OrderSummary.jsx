@@ -1,8 +1,9 @@
 import dayjs from "dayjs";
 import React from "react";
 import { formatMoney } from "../../utils/money";
+import DeliveryOptions from "./DeliveryOptions";
 
-export default function OrderSummary({ deliveryOptions, cart }) {
+export default function OrderSummary({ deliveryOptions, cart, loadCart }) {
   return (
     <div className="order-summary">
       {deliveryOptions.length > 0 &&
@@ -45,9 +46,10 @@ export default function OrderSummary({ deliveryOptions, cart }) {
                   </div>
                 </div>
 
-                <deliveryOptions
+                <DeliveryOptions
                   cartItem={cartItem}
                   deliveryOptions={deliveryOptions}
+                  loadCart={loadCart}
                 />
               </div>
             </div>
